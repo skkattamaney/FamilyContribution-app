@@ -1,7 +1,7 @@
 // Enhanced Family LEDGER - Frontend JavaScript with Authentication
 
 // Configuration - Replace with your Google Apps Script Web App URL
-const API_URL = 'https://script.google.com/macros/s/AKfycbxIZDb0YQ0SagQujLJ-hyCw9MEIgyJ93cG_r1uVTF-bMNbRElBzB_x28TmdbD-vYJo6/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbxy97DVwqwEX4OYAouH9rjlCWdynTeHdqc5NeaarLbaYc1fd47M_UQThx7RcCIoiNnq/exec';
 
 // Application state
 let currentUser = null;
