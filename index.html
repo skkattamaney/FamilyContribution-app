@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family LEDGER - Transaction Entry</title>
+    <title>Katamani Family LEDGER - Transaction Entry</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,24 +19,28 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        <i class="fas fa-lock me-2"></i>LEDGER Login
+                        <i class="fas fa-lock me-2"></i>Katamani Family LEDGER Login
                     </h5>
                 </div>
                 <div class="modal-body">
                     <div id="loginAlert"></div>
                     <form id="loginForm">
                         <div class="mb-3">
-                            <label for="loginEmail" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="loginEmail" required>
+                            <label for="loginEmail" class="form-label">
+                                <i class="fas fa-envelope me-2"></i>Email Address
+                            </label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email address" required>
                         </div>
                         <div class="mb-3">
-                            <label for="loginPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" required>
+                            <label for="loginPassword" class="form-label">
+                                <i class="fas fa-key me-2"></i>Password
+                            </label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary" id="loginBtn">
                                 <span class="login-text">
-                                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                                    <i class="fas fa-sign-in-alt me-2"></i>Login to LEDGER
                                 </span>
                                 <span class="login-loading d-none">
                                     <span class="spinner-border spinner-border-sm me-2"></span>
@@ -45,6 +49,12 @@
                             </button>
                         </div>
                     </form>
+                    <div class="text-center mt-3">
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Contact admin if you need login credentials
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,10 +73,12 @@
                 <div class="modal-body">
                     <div id="editAlert"></div>
                     <form id="editForm">
-                        <!-- Same form fields as main form but with "edit" prefix -->
+                        <!-- Transaction Type & Date -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="editTransactionType" class="form-label">Transaction Type *</label>
+                                <label for="editTransactionType" class="form-label">
+                                    <i class="fas fa-exchange-alt me-2"></i>Transaction Type *
+                                </label>
                                 <select class="form-select" id="editTransactionType" required>
                                     <option value="">Select Transaction Type</option>
                                     <option value="Monthly Dues">Monthly Dues</option>
@@ -75,20 +87,27 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <label for="editDate" class="form-label">Date *</label>
+                                <label for="editDate" class="form-label">
+                                    <i class="fas fa-calendar me-2"></i>Date *
+                                </label>
                                 <input type="date" class="form-control" id="editDate" required>
                             </div>
                         </div>
 
+                        <!-- Year, Month, MonthNum -->
                         <div class="row mb-3">
                             <div class="col-md-4">
-                                <label for="editYear" class="form-label">Year *</label>
+                                <label for="editYear" class="form-label">
+                                    <i class="fas fa-calendar-alt me-2"></i>Year *
+                                </label>
                                 <select class="form-select" id="editYear" required>
                                     <option value="">Select Year</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="editMonth" class="form-label">Month *</label>
+                                <label for="editMonth" class="form-label">
+                                    <i class="fas fa-calendar-month me-2"></i>Month *
+                                </label>
                                 <select class="form-select" id="editMonth" required>
                                     <option value="">Select Month</option>
                                     <option value="January">January</option>
@@ -106,7 +125,9 @@
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label for="editMonthNum" class="form-label">Month # *</label>
+                                <label for="editMonthNum" class="form-label">
+                                    <i class="fas fa-hashtag me-2"></i>Month # *
+                                </label>
                                 <select class="form-select" id="editMonthNum" required>
                                     <option value="">Month #</option>
                                     <option value="1">1</option>
@@ -125,28 +146,32 @@
                             </div>
                         </div>
 
+                        <!-- Family Member & Amount -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="editFamilyMember" class="form-label">Family Member</label>
+                                <label for="editFamilyMember" class="form-label">
+                                    <i class="fas fa-users me-2"></i>Family Member
+                                </label>
                                 <select class="form-select" id="editFamilyMember">
                                     <option value="">Select Family Member</option>
                                     <option value="Adzovi Lena Katamani">Adzovi Lena Katamani</option>
                                     <option value="Anthony Katamani">Anthony Katamani</option>
+                                    <option value="Beatrice Katamani">Beatrice Katamani</option>
                                     <option value="Edem Joshua Katamani">Edem Joshua Katamani</option>
                                     <option value="Enyo Katamani">Enyo Katamani</option>
-                                    <option value="Beatrice Katamani">Beatrice Katamani</option>
                                     <option value="Godwin Katamani">Godwin Katamani</option>
-                                    <option value="Jennifer Katamani"> Jennifer Katamani</option>
-                                    <option value="Josephine Katamani"> Josephine Katamani</option>
+                                    <option value="Jennifer Katamani">Jennifer Katamani</option>
+                                    <option value="Josephine Katamani">Josephine Katamani</option>
                                     <option value="Julius Katamani">Julius Katamani</option>
                                     <option value="Lambert Katamani">Lambert Katamani</option>
                                     <option value="Linda Katamani">Linda Katamani</option>
+                                    <option value="Maria Katamani">Maria Katamani</option>
                                     <option value="Mary Seke Katamani">Mary Seke Katamani</option>
                                     <option value="Mawufemor Rose Katamani">Mawufemor Rose Katamani</option>
                                     <option value="Mawuli Katamani">Mawuli Katamani</option>
                                     <option value="Mawulorm Katamani">Mawulorm Katamani</option>
                                     <option value="Mawuse Katamani">Mawuse Katamani</option>
-                                    <option value="Patricia Katamani"> Patricia Katamani</option>
+                                    <option value="Patricia Katamani">Patricia Katamani</option>
                                     <option value="Patrick Katamani">Patrick Katamani</option>
                                     <option value="Sefakor Ivy Katamani">Sefakor Ivy Katamani</option>
                                     <option value="Selasi Katamani">Selasi Katamani</option>
@@ -155,52 +180,310 @@
                                     <option value="Sroda Seraphine Katamani">Sroda Seraphine Katamani</option>
                                     <option value="Theresah Katamani">Theresah Katamani</option>
                                     <option value="Vida Katamani">Vida Katamani</option>
-                                    <option value="Yaw Raymond Katamani"> Yaw Raymond Katamani</option>
-                                    <option value="Maria Katamani">Maria Katamani</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="amount" class="form-label">
-                                        <i class="fas fa-dollar-sign me-2"></i>Amount *
-                                    </label>
-                                    <input type="number" class="form-control" id="amount" step="0.01" min="0" required>
-                                </div>
-                            </div>
-
-                            <!-- Category -->
-                            <div class="mb-3">
-                                <label for="category" class="form-label">
-                                    <i class="fas fa-tags me-2"></i>Category *
-                                </label>
-                                <select class="form-select" id="category" required>
-                                    <option value="">Select Category</option>
+                                    <option value="Yaw Raymond Katamani">Yaw Raymond Katamani</option>
                                 </select>
                             </div>
-
-                            <!-- Description -->
-                            <div class="mb-4">
-                                <label for="description" class="form-label">
-                                    <i class="fas fa-comment me-2"></i>Description/Purpose
+                            <div class="col-md-6">
+                                <label for="editAmount" class="form-label">
+                                    <i class="fas fa-money-bill me-2"></i>Amount *
                                 </label>
-                                <textarea class="form-control" id="description" rows="3" placeholder="Enter transaction details..."></textarea>
+                                <div class="input-group">
+                                    <span class="input-group-text">₵</span>
+                                    <input type="number" class="form-control" id="editAmount" step="0.01" min="0" placeholder="0.00" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="mb-3">
+                            <label for="editCategory" class="form-label">
+                                <i class="fas fa-tags me-2"></i>Category *
+                            </label>
+                            <select class="form-select" id="editCategory" required>
+                                <option value="">Select Category</option>
+                            </select>
+                            <div class="form-text">
+                                <i class="fas fa-info-circle me-1"></i>
+                                Category options will appear based on your transaction type selection
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-3">
+                            <label for="editDescription" class="form-label">
+                                <i class="fas fa-comment me-2"></i>Description/Purpose
+                            </label>
+                            <textarea class="form-control" id="editDescription" rows="3" placeholder="Enter transaction details (optional)..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Cancel
+                    </button>
+                    <button type="button" class="btn btn-primary" id="saveEditBtn">
+                        <span class="save-text">
+                            <i class="fas fa-save me-2"></i>Save Changes
+                        </span>
+                        <span class="save-loading d-none">
+                            <span class="spinner-border spinner-border-sm me-2"></span>
+                            Saving...
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="mainContainer" style="display: none;">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- User Info Bar -->
+                <div class="user-info-bar">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-user me-2"></i>
+                            Welcome, <strong id="userName">User</strong>
+                        </div>
+                        <button class="btn btn-outline-light btn-sm" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text-center mb-0">
+                            <i class="fas fa-book-open me-3"></i>
+                            Katamani Family LEDGER
+                        </h1>
+                        <p class="text-center mb-0 mt-2">Financial Transaction Entry System</p>
+                    </div>
+                    
+                    <div class="card-body">
+                        <!-- Status Messages -->
+                        <div id="alertContainer"></div>
+                        
+                        <!-- Progress Indicator -->
+                        <div class="progress mb-4" style="height: 6px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%" id="formProgress"></div>
+                        </div>
+                        
+                        <!-- Main Form -->
+                        <form id="ledgerForm">
+                            <!-- Section 1: Transaction Details -->
+                            <div class="form-section mb-4">
+                                <h5 class="section-title">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    Transaction Details
+                                </h5>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="transactionType" class="form-label">
+                                            <i class="fas fa-exchange-alt me-2"></i>Transaction Type *
+                                        </label>
+                                        <select class="form-select" id="transactionType" required>
+                                            <option value="">Select Transaction Type</option>
+                                            <option value="Monthly Dues">Monthly Dues</option>
+                                            <option value="Special Contributions">Special Contributions</option>
+                                            <option value="Expenditure">Expenditure</option>
+                                        </select>
+                                        <div class="form-text">
+                                            <i class="fas fa-lightbulb me-1"></i>
+                                            Choose the type of financial transaction
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="date" class="form-label">
+                                            <i class="fas fa-calendar me-2"></i>Transaction Date *
+                                        </label>
+                                        <input type="date" class="form-control" id="date" required>
+                                        <div class="form-text">
+                                            <i class="fas fa-clock me-1"></i>
+                                            When did this transaction occur?
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Submit Button -->
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
-                                    <span class="submit-text">
-                                        <i class="fas fa-save me-2"></i>Record Transaction
-                                    </span>
-                                    <span class="loading d-none">
-                                        <span class="spinner-border spinner-border-sm me-2"></span>
-                                        Recording...
-                                    </span>
-                                </button>
+                            <!-- Section 2: Date Information -->
+                            <div class="form-section mb-4">
+                                <h5 class="section-title">
+                                    <i class="fas fa-calendar-alt me-2"></i>
+                                    Date Information
+                                </h5>
                                 
-                                <!-- Edit Button (shown after successful submission) -->
-                                <button type="button" class="btn btn-outline-warning btn-lg d-none" id="editLastBtn">
-                                    <i class="fas fa-edit me-2"></i>Edit Last Transaction
-                                </button>
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <label for="year" class="form-label">
+                                            <i class="fas fa-calendar-alt me-2"></i>Year *
+                                        </label>
+                                        <select class="form-select" id="year" required>
+                                            <option value="">Select Year</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="month" class="form-label">
+                                            <i class="fas fa-calendar-month me-2"></i>Month *
+                                        </label>
+                                        <select class="form-select" id="month" required>
+                                            <option value="">Select Month</option>
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="monthNum" class="form-label">
+                                            <i class="fas fa-hashtag me-2"></i>Month Number *
+                                        </label>
+                                        <select class="form-select" id="monthNum" required>
+                                            <option value="">Month #</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="fas fa-magic me-2"></i>
+                                    <strong>Auto-sync:</strong> Month and Month Number fields sync automatically when you select the transaction date above.
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Financial Details -->
+                            <div class="form-section mb-4">
+                                <h5 class="section-title">
+                                    <i class="fas fa-money-bill-wave me-2"></i>
+                                    Financial Details
+                                </h5>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="familyMember" class="form-label">
+                                            <i class="fas fa-users me-2"></i>Family Member
+                                        </label>
+                                        <select class="form-select" id="familyMember">
+                                            <option value="">Select Family Member (Optional)</option>
+                                            <option value="Adzovi Lena Katamani">Adzovi Lena Katamani</option>
+                                            <option value="Anthony Katamani">Anthony Katamani</option>
+                                            <option value="Beatrice Katamani">Beatrice Katamani</option>
+                                            <option value="Edem Joshua Katamani">Edem Joshua Katamani</option>
+                                            <option value="Enyo Katamani">Enyo Katamani</option>
+                                            <option value="Godwin Katamani">Godwin Katamani</option>
+                                            <option value="Jennifer Katamani">Jennifer Katamani</option>
+                                            <option value="Josephine Katamani">Josephine Katamani</option>
+                                            <option value="Julius Katamani">Julius Katamani</option>
+                                            <option value="Lambert Katamani">Lambert Katamani</option>
+                                            <option value="Linda Katamani">Linda Katamani</option>
+                                            <option value="Maria Katamani">Maria Katamani</option>
+                                            <option value="Mary Seke Katamani">Mary Seke Katamani</option>
+                                            <option value="Mawufemor Rose Katamani">Mawufemor Rose Katamani</option>
+                                            <option value="Mawuli Katamani">Mawuli Katamani</option>
+                                            <option value="Mawulorm Katamani">Mawulorm Katamani</option>
+                                            <option value="Mawuse Katamani">Mawuse Katamani</option>
+                                            <option value="Patricia Katamani">Patricia Katamani</option>
+                                            <option value="Patrick Katamani">Patrick Katamani</option>
+                                            <option value="Sefakor Ivy Katamani">Sefakor Ivy Katamani</option>
+                                            <option value="Selasi Katamani">Selasi Katamani</option>
+                                            <option value="Senanu Katamani">Senanu Katamani</option>
+                                            <option value="Seth-Tus Kattamaney">Seth-Tus Kattamaney</option>
+                                            <option value="Sroda Seraphine Katamani">Sroda Seraphine Katamani</option>
+                                            <option value="Theresah Katamani">Theresah Katamani</option>
+                                            <option value="Vida Katamani">Vida Katamani</option>
+                                            <option value="Yaw Raymond Katamani">Yaw Raymond Katamani</option>
+                                        </select>
+                                        <div class="form-text">
+                                            <i class="fas fa-user me-1"></i>
+                                            Which family member is this transaction for?
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="amount" class="form-label">
+                                            <i class="fas fa-money-bill me-2"></i>Amount *
+                                        </label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">₵</span>
+                                            <input type="number" class="form-control" id="amount" step="0.01" min="0" placeholder="0.00" required>
+                                        </div>
+                                        <div class="form-text">
+                                            <i class="fas fa-calculator me-1"></i>
+                                            Enter the transaction amount in Ghana Cedis
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 4: Category & Description -->
+                            <div class="form-section mb-4">
+                                <h5 class="section-title">
+                                    <i class="fas fa-tags me-2"></i>
+                                    Category & Description
+                                </h5>
+                                
+                                <div class="mb-3">
+                                    <label for="category" class="form-label">
+                                        <i class="fas fa-tags me-2"></i>Category *
+                                    </label>
+                                    <select class="form-select" id="category" required>
+                                        <option value="">Select Category</option>
+                                    </select>
+                                    <div class="form-text">
+                                        <i class="fas fa-filter me-1"></i>
+                                        Category options will appear based on your transaction type selection above
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="description" class="form-label">
+                                        <i class="fas fa-comment me-2"></i>Description/Purpose
+                                    </label>
+                                    <textarea class="form-control" id="description" rows="3" placeholder="Enter transaction details, purpose, or any additional notes (optional)..."></textarea>
+                                    <div class="form-text">
+                                        <i class="fas fa-pencil-alt me-1"></i>
+                                        Provide additional context about this transaction
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Section -->
+                            <div class="form-section">
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                                        <span class="submit-text">
+                                            <i class="fas fa-save me-2"></i>Record Transaction
+                                        </span>
+                                        <span class="loading d-none">
+                                            <span class="spinner-border spinner-border-sm me-2"></span>
+                                            Recording...
+                                        </span>
+                                    </button>
+                                    
+                                    <!-- Edit Button (shown after successful submission) -->
+                                    <button type="button" class="btn btn-outline-warning btn-lg d-none" id="editLastBtn">
+                                        <i class="fas fa-edit me-2"></i>Edit Last Transaction
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
